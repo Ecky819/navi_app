@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'news_screen.dart';
+import 'widgets/app_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'MyApp',
-      theme: ThemeData(primarySwatch: Colors.yellow),
-      home: const NewsScreen(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lime),
+        useMaterial3: true,
+      ),
+      home: const AppHome(),
     );
   }
 }
